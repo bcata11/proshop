@@ -9,7 +9,7 @@ import orderRoutes from './routes/orderRoutes.js';
 
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
-const port = process.env.PORT || 5000;
+const port = process.env.VITE_PORT || 5000;
 
 connectDB();
 
@@ -31,7 +31,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/orders', orderRoutes);
 app.get('/api/config/paypal', (req, res) => 
-    res.send({clientId: process.env.PAYPAL_CLIENT_ID}));
+    res.send({clientId: process.env.VITE_PAYPAL_CLIENT_ID}));
 
 
 app.use(notFound);

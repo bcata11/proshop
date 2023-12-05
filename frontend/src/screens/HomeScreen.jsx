@@ -9,7 +9,7 @@ const HomeScreen = () => {
   const { data: products, isLoading, error } = useGetProductsQuery();
 
   return (
-    <>
+    <div>
       { isLoading ? (
         <Loader/>
       ): error ? (
@@ -28,7 +28,7 @@ const HomeScreen = () => {
       ) }
 
         
-    </>
+    </div>
   )
 }
 

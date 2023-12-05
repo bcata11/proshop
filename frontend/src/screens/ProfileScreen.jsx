@@ -1,16 +1,16 @@
-import React from 'react'
+// import React from 'react'
 import { useEffect, useState } from 'react';
 import { Table, Form, Button, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 // import { FaTimes } from 'react-icons/fa';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
-// import Message from '../components/Message';
-// import Loader from '../components/Loader';
-// import { useProfileMutation } from '../slices/usersApiSlice';
+import Message from '../components/Message';
+import Loader from '../components/Loader';
+import { useProfileMutation } from '../slices/usersApiSlice';
 // import { useGetMyOrdersQuery } from '../slices/ordersApiSlice';
-// import { setCredentials } from '../slices/authSlice';
+import { setCredentials } from '../slices/authSlice';
 // import { set } from 'mongoose';
 
 const ProfileScreen = () => {
@@ -28,7 +28,7 @@ const ProfileScreen = () => {
             setName(userInfo.name);
             setEmail(userInfo.email);
         }
-    }, [userInfo.name, userInfo.email]);
+    }, [userInfo, userInfo.name, userInfo.email]);
 
     const submitHandler = (e) => {
         e.preventDefault();
