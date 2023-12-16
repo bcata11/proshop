@@ -34,9 +34,9 @@ table th {
 
 .review h2 {
   font-size: 24px;
-  background: #f4f4f4;
+  background: #040404;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #333;
 }
 
 .review button {
@@ -49,5 +49,13 @@ table th {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
+}
+.carousel-caption h2 {
+  color: #ddd;
+}
+.carousel-indicators button {
+  background-color: #ddd;
+  color:#ddd;
+  border-bottom: #ddd;
 }
