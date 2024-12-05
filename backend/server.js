@@ -22,11 +22,6 @@ app.use(express.urlencoded({ extended: true }))
 // Cookie parser middleware
 app.use(cookieParser())
 
-// moved to bottom
-// app.get('/', (req, res) => {
-//   res.send('API is running...')
-// })
-
 app.use('/api/products', productRoutes)
 app.use('/api/users', userRoutes)
 app.use('/api/orders', orderRoutes)
